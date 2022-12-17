@@ -1,30 +1,40 @@
-export const ADD_PJ_FAV = "";
+export const ADD_PJ_FAV = "ADD_PJ_FAV";
 export const DELETE_PJ_FAV = "DELETE_PJ_FAV";
 export const FILTER = "FILTER";
+export const ORDER = "ORDER"
 
-export function addPJFav (status) {
+export function addPJFav (pj) {
     return (
         {
             type: ADD_PJ_FAV,
-            payload: status.id
+            payload: pj
         }
     )
 }
 
-export function deletePJFav (status) {
+export function deletePJFav (id) {
     return (
         {
             type: DELETE_PJ_FAV,
-            payload: status.id
+            payload: id
         }
     )
 }
 
-export function filterCards (status) {
+export function filterCards (gender) {
     return (
         {
             type: FILTER,
-            payload: status.gender
+            payload: gender
+        }
+    )
+}
+
+export function orderCards (order) {
+    return (
+        {
+            type: ORDER,
+            payload: order
         }
     )
 }

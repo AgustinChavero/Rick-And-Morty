@@ -13,7 +13,6 @@ export default function Forms (props) {
     const handleInputChange = (e) => {
         setUserData({...userData, [e.target.name]: e.target.value})
         setErrors({...errors, ...validation({[e.target.name]: e.target.value})})
-        console.log(errors)
     }
     const handleSubmit = (e) => {
         e.preventDefault();

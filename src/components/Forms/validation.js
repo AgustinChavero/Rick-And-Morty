@@ -5,23 +5,18 @@ function validation (userData) {
   let errors = {}
 
   if (userData.username) {
-    console.log("Entre a username")
     if (!emailRegex.test(userData.username)) {
-      
       errors.username = "No es un mail valido"
-      console.log("entre a mail error")
     } else {
       errors.username = ""
     }
   } else {
       if (!passwordRegex.test(userData.password)) {
         errors.password = "La contraseña no es valida"
-        console.log("entre a pass error")
       } else {
         errors.password = ""
       }
     }
-
   return errors;
 }
 

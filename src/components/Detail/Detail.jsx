@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import Logo from "../logo.png"
+import Logo from "../../logo.png"
 
 export default function Detail () {
     

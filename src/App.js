@@ -3,14 +3,15 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate} from "react-router-dom";
 
-import Nav from "./components/Nav.jsx";
+import Nav from "./components/Nav/Nav";
 
-import Cards from "./components/Cards.jsx";
-import About from "./components/About.jsx";
-import Detail from "./components/Detail.jsx";
-import Forms from "./components/Form/Forms";
+import Cards from "./components/Cards/Cards.jsx";
+import About from "./components/About/About.jsx";
+import Detail from "./components/Detail/Detail.jsx";
+import Forms from "./components/Forms/Forms";
 
 import Logo from "./logo.png";
+import Favorite from "./components/Favorite/Favorite";
 
 function App() {
   const ready = useLocation()
@@ -38,7 +39,7 @@ function App() {
   };
   const onClose = (event) => {
     setCharacters(characters.filter((e) => e.id !== event))
-  }  
+  }
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
@@ -61,8 +62,9 @@ function App() {
       {ready.pathname === "/" ? null : <Nav onSearch={onSearch}/>}
       {aparece ? <Aviso>Tu personaje ya esta enlistado</Aviso> : false}
       <Routes>
-        <Route exact path="/" element={<Forms login={login}/>}/>
+        <Route path="/" element={<Forms login={login}/>}/>
         <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>}/>
+        <Route path="/favorite" element={<Favorite/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:detailId" element={<Detail/>}/>
       </Routes>

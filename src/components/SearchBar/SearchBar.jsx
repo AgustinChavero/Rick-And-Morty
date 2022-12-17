@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const Caja = styled.div `
+const Caja = styled.form `
    padding: 30px;
 `
 const Inputcito = styled.input `
@@ -26,19 +26,23 @@ const Botoncito = styled.button `
 `
 
 export default function SearchBar(props) {
-   const [id, setId] = useState();
+   const [id, setId] = useState("");
    const handleChange = (e) => {
-      setId(e.target.value)
+      setId(e.target.value);
+   }
+   const handleSubmit = (e) => {
+      e.preventDefault()
+      console.log("AHHHHHHHHHHHHH")
+      props.onSearch(id)
+      setId("")
    }
    return (
-      <Caja>
+      <Caja onSubmit={handleSubmit}>
          <Inputcito 
             type='search' 
             onChange={handleChange}
             />
-         <Botoncito 
-            onClick={() => props.onSearch(id)}
-         >Search</Botoncito>
+         <Botoncito>Search</Botoncito>
       </Caja>
    );
 }
