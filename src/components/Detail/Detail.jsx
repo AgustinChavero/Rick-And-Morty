@@ -24,7 +24,7 @@ export default function Detail () {
     }, [detailId]);
 
     return (
-          <div>
+          <div className={style.detail}>
             <div className={style.caja}>
               <div style={{margin: "0px 15px 10px 0px", width:"30%"}}>
                 <img className={style.fotito} src={character.image} alt=""/>
