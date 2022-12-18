@@ -25,7 +25,6 @@ export default function Card(props) {
             setFavs(true)
          }
       }}, [favorites])
-
    
    return (
       <div className={style.caja}>

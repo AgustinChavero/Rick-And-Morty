@@ -32,7 +32,6 @@ export default function SearchBar(props) {
    }
    const handleSubmit = (e) => {
       e.preventDefault()
-      console.log("AHHHHHHHHHHHHH")
       props.onSearch(id)
       setId("")
    }

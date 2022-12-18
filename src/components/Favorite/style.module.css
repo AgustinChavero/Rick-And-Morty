@@ -1,0 +1,28 @@
+.box {
+    display: flex;
+    margin-left: 90px;
+    flex-wrap: wrap;
+}
+.boxOfSelect {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.select {
+    margin: 10px;
+    background-color: rgb(40, 124, 76);
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+.select:focus-visible {
+    outline: none;
+}
+.options {
+    color: white;
+    font-weight: bolder;
+}

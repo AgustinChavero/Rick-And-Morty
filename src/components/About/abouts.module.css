@@ -1,0 +1,36 @@
+.box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 16px;
+    background-color: #14381452;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px #193d1ba7 solid;
+    backdrop-filter: blur(2px);
+}
+
+.photo {
+    border-radius: 10px;
+    width: 70%;
+}
+.name {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-shadow: rgb(53, 55, 56) 1px 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.infoCtn {
+    padding-left: 0px;
+}
+.info {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-shadow: rgb(53, 55, 56) 1px 1px 10px;
+}

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-
-import Logo from "../../logo.png"
+import style from "./style.module.css";
 
 export default function Detail () {
     
@@ -26,17 +24,22 @@ export default function Detail () {
     }, [detailId]);
 
     return (
-        <div>
-            <Link to="/home"><img src={Logo} alt=""/></Link>
-            <div>
-                <h1>{character.name}</h1>
-                <img src={character.image} alt=""/>
-                <h3>{character.origin?.name}</h3>
-                <h3>{character.specie}</h3>
-                <h3>{character.location?.name}</h3>
-                <h3>{character.gender}</h3>
-                <h3>{character.status}</h3>
+          <div>
+            <div className={style.caja}>
+              <div style={{margin: "0px 15px 10px 0px", width:"30%"}}>
+                <img className={style.fotito} src={character.image} alt=""/>
+              </div>
+              <div className={style.info}>
+                <h1 className={style.name}>{character.name}</h1>
+                <h3 className={style.letras}>Specie: {character.species}</h3>
+                <h3 className={style.letras}>Gender: {character.gender}</h3>
+                <h3 className={style.letras}>Origin: {character.origin?.name}</h3>
+                <h3 className={style.letras}>Ubication: {character.location?.name}</h3>
+                <h3 className={style.letras}>Apparences: {character.episode?.length}</h3>
+                <h3 className={style.letras}>Status: {character.status}</h3>
+                <h3 className={style.letras}>Creation: {character.created}</h3>
+              </div>
             </div>
-        </div>
+          </div>
     )
 }

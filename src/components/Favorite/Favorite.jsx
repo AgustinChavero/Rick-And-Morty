@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import styled from "styled-components";
+import style from "./style.module.css";
 import * as actions from "../../redux/actions";
 import Card from "../Card/Card"
 
@@ -16,36 +17,40 @@ export default function Favorite () {
     }
 
     return (
-        <div>
-            <select onChange={handleOrder}>
-                <Option hidden>Order</Option>
-                <Option value="ascendent">Ascendent</Option>
-                <Option value="descendent">Descendent</Option>
-            </select>
-            <select onChange={handleFilter}>
-                <Option hidden>Filter</Option>
-                <Option value="Male">Male</Option>
-                <Option value="Female">Female</Option>
-                <Option value="Genderless">Genderless</Option>
-                <Option value="unknown">Unknown</Option>
-            </select>
-            {favorites.map(
-                (e) => 
-                <Card
-                    id={e.id}
-                    key={e.id}
-                    image={e.image}
-                    name={e.name}
-                    species={e.species}
-                    gender={e.gender}
-                    origin={e.origin}
-                    location={e.location}
-                    episode={e.episode}
-                    status={e.status}
+        <div className={style.boxOfSelect}>
+            <div>
+                <select onChange={handleOrder} className={style.select}>
+                    <Option hidden>Order</Option>
+                    <Option value="ascendent" className={style.options}>Ascendent</Option>
+                    <Option value="descendent" className={style.options}>Descendent</Option>
+                </select>
+                <select onChange={handleFilter} className={style.select}>
+                    <Option hidden>Filter</Option>
+                    <Option value="Male" className={style.options}>Male</Option>
+                    <Option value="Female" className={style.options}>Female</Option>
+                    <Option value="Genderless" className={style.options}>Genderless</Option>
+                    <Option value="unknown" className={style.options}>Unknown</Option>
+                </select>
+            </div>
+            <div className={style.box}>
+                {favorites.map(
+                    (e) => 
+                    <Card
+                        id={e.id}
+                        key={e.id}
+                        image={e.image}
+                        name={e.name}
+                        species={e.species}
+                        gender={e.gender}
+                        origin={e.origin}
+                        location={e.location}
+                        episode={e.episode}
+                        status={e.status}
 
-                    onClose={e.onClose}
-                />
-            )}
+                        onClose={e.onClose}
+                    />
+                )}
+            </div>
         </div>
     )
 }

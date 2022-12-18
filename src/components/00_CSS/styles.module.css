@@ -1,19 +1,38 @@
+.navegador {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #0a0a0abb;
+    display: flex;
+    text-decoration: none;
+}
 .navlink {
     text-decoration: none;
-    color: whitesmoke;
-    padding-left: 20px;
+    color: rgb(66, 198, 187);
+    text-shadow: rgb(126, 155, 38) 1px 1px 10px;;
+    padding-top: 24px;
+    padding-left: 45px;
+    font-size: 30px;
+    margin-left: 0;
+    justify-content: flex-start;
+    font-family: fantasy;
+}
+.navInput {
+    padding-left: 100px;
+    justify-content: flex-end;
 }
 .caja {
     width: 600px;
-   margin: 30px;
-   display: flex;
-   padding: 20px;
-   background-color: #14381452;
-   position: relative;
-   margin-bottom: 20px;
-   border-radius: 10px;
-   border: 1px #193d1ba7 solid;
-   backdrop-filter: blur(2px);
+    margin: 30px;
+    display: flex;
+    padding: 16px;
+    background-color: #14381452;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px #193d1ba7 solid;
+    backdrop-filter: blur(2px);
 }
 .fotito {
     border-radius: 5px;
@@ -24,12 +43,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
     text-shadow: rgb(53, 55, 56) 1px 1px 10px;
-    text-align: center;
     text-decoration: none;
     color: white;
 }
 .info {
     padding-left: 0;
+    text-align: left;
 }
 .letras {
     font-size: 20px;

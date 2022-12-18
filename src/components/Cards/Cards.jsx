@@ -23,6 +23,7 @@ export default function Cards(props) {
 }
 
 const DivContenedor = styled.div `
+   margin-left: 90px;
    display: flex;
    flex-wrap: wrap;
 `
